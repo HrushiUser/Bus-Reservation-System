@@ -3,7 +3,6 @@
 #include <string.h>
 #define ROWS 5
 #define COLS 4
-
 typedef struct
 {
     char name[50];
@@ -12,7 +11,6 @@ typedef struct
     char gender[10];
     int seatNumber;
 } Booking;
-
 typedef struct
 {
     int serviceNumber;
@@ -24,7 +22,6 @@ typedef struct
     char routeTo[20];
     int price;
 } BusService;
-
 BusService busServices[] =
 {
     {12345, "Amaravati", "Volvo Multi Axle A/C", "09:00", "05:00", "Vijayawada", "Hyderabad", 650},
@@ -34,9 +31,7 @@ BusService busServices[] =
     {56789, "SETC", "A/C Sleeper", "07:00", "11:00", "Bangalore", "Chennai", 500},
     {67890, "Nuego", "A/C Semi Sleeper", "08:00", "05:00", "Chennai", "Hyderabad", 800}
 };
-
 int seats[ROWS][COLS] = {0};
-
 void displayRoutes()
 {
     printf("\nAvailable Bus Routes:\n");
@@ -47,14 +42,12 @@ void displayRoutes()
     }
     printf("-----------------------------------------------\n");
 }
-
 int displayBusServices(const char *from, const char *to)
 {
     printf("\nAvailable Bus Services from %s to %s:\n", from, to);
     printf("-----------------------------------------------------------------------------------------------------------------\n");
     printf("Service No | Bus Name      | Type                      | Departure | Arrival | Source      | Destination | Price \n");
     printf("-----------------------------------------------------------------------------------------------------------------\n");
-
     int found = 0;
     for (int i = 0; i < sizeof(busServices) / sizeof(busServices[0]); i++)
     {
@@ -75,7 +68,6 @@ int displayBusServices(const char *from, const char *to)
     printf("----------------------------------------------------------------------------------------------------------------\n");
     return found;
 }
-
 void displaySeats()
 {
     printf("\n[ ] - Available   [o] - Booked   [W] - Window Seat\n");
@@ -95,7 +87,6 @@ void displaySeats()
         printf(" |\n");
     }
 }
-
 void waitForEnter()
 {
     int ch;
@@ -103,7 +94,6 @@ void waitForEnter()
     printf("\nPress Enter to proceed...\n");
     getchar();
 }
-
 int main()
 {
     char from[20], to[20];
@@ -111,7 +101,6 @@ int main()
     Booking user;
     printf("Welcome to the Bus Reservation System!\n");
     printf("---------------------------------------------------\n");
-
     while (1)
     {
         displayRoutes();
@@ -124,12 +113,9 @@ int main()
         else
             printf("No Bus Services Available for this Route! Please enter a valid route.\n");
     }
-
     waitForEnter();
-
     printf("\nSeat Layout:\n");
     displaySeats();
-
     while (1)
     {
         printf("\nEnter your seat number (1-30): ");
