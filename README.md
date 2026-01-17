@@ -3,7 +3,7 @@ Bus Reservation System – C Project
 
 Welcome to the Bus Reservation System, a console-based application built using the C programming language. This project allows users to search bus routes, view available services, select seats, and confirm bookings with an easy and interactive workflow.
 
-✨ Features:
+✨ Features
 
 -->View available bus routes
 
@@ -20,7 +20,7 @@ Welcome to the Bus Reservation System, a console-based application built using t
 -->Instant booking confirmation message
 
 
-🛠 Tools & Technologies Used
+🛠 Tools & Technologies 
 
 C Programming Language
 
